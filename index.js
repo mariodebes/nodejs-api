@@ -1,10 +1,12 @@
 // index.js
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
 dotenv.config();
+app.use(cors());
 
 // Mock database of tokens and corresponding users
 const usersDB = {
